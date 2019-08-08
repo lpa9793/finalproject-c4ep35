@@ -7,24 +7,22 @@
 body {
     background-image: linear-gradient(rgba(133, 128, 128, 0.7),rgba(133, 128, 128, 0.7)), url('fridge.jpeg');
     background-color: bisque;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    color: rgb(39, 37, 35);
     font-weight: 200;
     font-size: 18px;
     text-rendering: optimizeLegibility;
 }
 
 h1 {
+    color: chocolate;
     font-family: 'Oswald', sans-serif;
     font-optical-sizing: 80%;
     font-size: 40px;
     margin: 0;
-    color: rgb(61, 10, 10);
     top: 60%;
     text-align: center;
     left: 20%;
-
 }
 
 
@@ -32,9 +30,7 @@ button {
     font-family: 'Arial', sans-serif;
     width: 30%;
     font-size: 20px;
-    background-color: rgb(206, 101, 40);
     color: white;
-    border: rgb(206, 101, 40);
     padding: 0;
     text-align: center;
     border-radius: 4px;

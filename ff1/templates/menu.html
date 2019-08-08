@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friendly Fridge</title>
+    <link rel="stylesheet" href="../static/menu.css">
+    <!-- <script src="../static/button.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div>
+        <input id="ga" type="button" name="Gà" class="button" value="Gà">
+        <input id="bo" type="button" name="Bò" class="button" value="Bò" style="animation-delay:0.06s">
+        <input id="lon" type="button" name="Lợn" class="button" value="Lợn" style="animation-delay:0.10s">
+        <input id="trung" type="button" name="Trứng" class="button" value="Trứng" style="animation-delay:0.13s">
+        <input id="pasta" type="button" name="Pasta" class="button" value="Pasta" style="animation-delay:0.03s">
+        <input id="com" type="button" name="Cơm" class="button com" value="Cơm" style="animation-delay:0.07s">
+        <input id="ca" type="button" name="Cà chua" class="button" value="Cà chua" style="animation-delay:0.11s">
+        <input id="hanh" type="button" name="Hành tây" class="button" value="Hành tây" style="animation-delay:0.16s">
+        <input id="nop" type="submit" class="button1" value="Vào bếp">
+    </div>
+    <script>
+        var listFood = []
+        $('.button1').click(() => {
+            console.log(listFood)
+            fetch(`/search`, {
+                headers: {
+                    "Content-Type": "application/json"
+                }, method: "POST", body: JSON.stringify({ data: listFood })
+            }).then(res =>res.text()).then(res=>window.location.pathname=res)
+        })
+        $('.button').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active')
+                listFood.splice(listFood.indexOf(this.id), 1);
+
+            } else {
+                $(this).addClass('active')
+                listFood.push(this.id);
+            }
+        });
+    </script>
+</body>
+
+</html>

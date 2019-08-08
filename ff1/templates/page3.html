@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cooking instruction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='page3.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="overall">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="/search">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Ing">Nguyên liệu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Dir">Cách làm</a>
+            </li>
+        </ul>
+        <hr width="40%">
+        <br>
+        <div id="background-color">
+            <div class="recipe-summary" style="display: flex;">
+                <div class="recipe-detail" style="width: 50%">
+                    <h2> {{food.title}} </h2>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Thời gian</th>
+                            <th>Nguyên liệu</th>
+                            <th>Calories</th>
+                        </tr>
+                        <tr>
+                            <td> {{food.Time}} </td>
+                            <td>10</td>
+                            <td>304</td>
+                        </tr>
+                    </table>
+                </div>
+                        
+                <div class="recipe-image" style="width: 50%;">
+                    <img src=" {{food.pic}} " alt="">
+                </div>
+            </div>
+            <br>
+            <div class="recipe-info">
+                <div class="recipe-description">
+                    <h3 id="Des">Giới thiệu</h3>
+                    <pre> {{food.description}} </pre>
+                </div>
+                <br>
+                <div class="recipe-ingredients">
+                    <h3 id="Ing">Nguyên liệu</h3>
+
+                </div>
+                <br>
+                <div class="recipe-directions">
+                    <h3 id="Dir">Cách làm</h3>
+                    <pre>
+                        {{food.content}}
+                    </pre>
+                </div>
+                <div class="recipe-tags">
+                    <div class="w3-bar">
+                        <h3>Chủ đề</h3>
+                        {% for v in food.kw %}
+                            <a href="/results/{{v}}" class="w3-button w3-white w3-border w3-border-pink w3-round-large"> {{v}} </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Thank-u">
+            <p>Chúc các bạn thành công!</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    background-image: url('http://www.lee-pace.org/wp-content/uploads/d/d-informal-contemporary-kitchens-2012.jpg');
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+}
+/* .background-image {
+    background-image: url("http://www.lee-pace.org/wp-content/uploads/d/d-informal-contemporary-kitchens-2012.jpg");
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+/* .content {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 12.5%;
+
+} */
+table {
+    border: none;
+    border-collapse: collapse;
+}
+table, th, td {
+    border-left: 1px solid black;
+}
+table, th:first-child, td:first-child {
+    border-left: none;
+}
+th, td {
+    text-align: center !important; 
+}
+.recipe-image img {
+    padding: 20px 20px 20px 20px;
+    max-width: 100%;
+    border-radius: 35px;
+}
+.overall {
+    background-color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    width: 75%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 12.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px 60px 30px 60px;
+}
+.nav-item a {
+    color: black;
+}
+.nav-item a:hover {
+    color: darkred;
+    font-size: 110%;
+}
+.recipe-detail h2 {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+/* .back-title h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+} */
+.Thank-u p {
+    font-family: "Beth Ellen";
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5rem;
+    color: khaki;
+}
+hr {
+    margin: 0 30% 0 30%!important;
+}
+/* .recipe-ingredients {
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-content: center;
+    border-radius: 10px;
+}
+
+.recipe-directions {
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-content: center;
+    border-radius: 10px; 
+}*/
+h3 {
+    font-weight: 900;
+    text-decoration: underline;
+}
+pre {
+    font-family: 'Times New Roman', Times, serif!important;
+    font-size: 1.5rem!important;
+}

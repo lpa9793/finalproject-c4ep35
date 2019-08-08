@@ -8,5 +8,6 @@ db = client.team2
 def search_all_food():
     return list(db.ff.find())
 
-def search_food(keyword):
-    return list(db.ff.find({'kw': keyword}))
+def find_recipe(recipe_id):
+    return db.ff.find_one({'_id': ObjectId(recipe_id)})
+    
