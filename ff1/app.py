@@ -3,19 +3,15 @@ from mongodb import search_all_food, find_recipe
 # from data import
 app = Flask(__name__)
 
-
 listFood = []
-
 
 @app.route('/')
 def home():
     return render_template('homepage.html')
 
-
 @app.route('/search')
 def menu():
     return render_template('menu.html')
-
 
 @app.route('/search', methods=["POST"])
 def search():
@@ -52,7 +48,6 @@ def result(listFood):
                         food_select.append(i)
     return render_template('index.html',data=food_select)
 
-
 # Dung
 @app.route('/recipe/<recipe_id>')
 def description(recipe_id):
@@ -60,7 +55,6 @@ def description(recipe_id):
     return render_template('page3.html',food=recipe)
 
 
-
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
-
+    
